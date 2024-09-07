@@ -179,19 +179,19 @@ const updateRecipeCount = (count) => {
 };
 
 
+//fonction de filtre des recettes
 const filterRecipes = () => {
-  const filteredRecipes = recipes.filter((recipe) => {
-      return (
-          filterByIngredient(recipe) &&
-          filterByUstensil(recipe) &&
-          filterByAppliance(recipe) &&
-          filterBySearch(recipe)
-      );
-  });
-  // Mise à jour du compteur
-  updateRecipeCount(filteredRecipes.length);
 
-  // Affichage des recettes filtrées
+  let filteredRecipes = []
+  for(let i = 0; i < recipes.length; i++){
+    let recipe = recipes[i] 
+    if(filterByIngredient(recipe) &&
+      filterByUstensil(recipe) &&
+      filterByAppliance(recipe) &&
+      filterBySearch(recipe)) {
+        filteredRecipes.push(recipe)
+    }
+  }
   displayRecipes(filteredRecipes);
 };
 
