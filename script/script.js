@@ -192,6 +192,9 @@ const filterRecipes = () => {
         filteredRecipes.push(recipe)
     }
   }
+  // Mise à jour du compteur
+  updateRecipeCount(filteredRecipes.length);
+  // Afficher les recettes filtrées
   displayRecipes(filteredRecipes);
 };
 
