@@ -3,9 +3,16 @@ export function displayRecipes(recipes) {
     const descriptions = [];
     const imgUrl = 'assets/imgRecipes/';
 
-    // Création des fiches pour les recettes
+     // Création des fiches pour les recettes
     const recipesContainer = document.querySelector('.recipes');
+    const notFoundMessage = document.querySelector('.recipes-not-found');
     recipesContainer.innerHTML = '';
+
+    if (recipes.length === 0) {
+        notFoundMessage.style.display = 'block';  
+    } else {
+        notFoundMessage.style.display = 'none';   
+    }
 
 
     recipes.forEach(recipe => {
