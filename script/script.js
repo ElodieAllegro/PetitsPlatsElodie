@@ -196,6 +196,7 @@ const filterRecipes = () => {
   updateRecipeCount(filteredRecipes.length);
   // Afficher les recettes filtrées
   displayRecipes(filteredRecipes);
+   hideNoRecipeElements(filteredRecipes)
 };
 
 
