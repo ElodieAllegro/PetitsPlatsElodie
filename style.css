@@ -253,7 +253,13 @@ button:focus {
   overflow-y: scroll;
   width: 100%;
 }
-
+.recipes-not-found {
+ 
+  font-size: 24px;
+  text-align: center;
+  margin: 50px 20px;
+  display: none;
+}
 /* -------recettes-----------  */
 .recipes {
   /* position: relative;
